@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details — Spoorthy EMS</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/club.css">
+    <link rel="stylesheet" href="css/event.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="home.html" class="navbar-brand">🎓 <span>Sphoorthy EMS</span></a>
+            <ul class="navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html#clubs">Clubs</a></li>
+                <li><a href="all-events.html">Events</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <div class="profile-avatar" id="profileAvatar">?</div>
+                        <div class="profile-info">
+                            <div class="profile-name" id="profileName">User</div>
+                            <div class="profile-role" id="profileRole">—</div>
+                        </div>
+                    </button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item danger" onclick="logout()">🚪 Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Event Hero -->
+    <section class="detail-hero">
+        <div class="detail-hero-content">
+            <a href="home.html#events" class="back-link">← Back to Events</a>
+        </div>
+        <div class="detail-hero-content">
+            <div class="detail-title" style="flex:1">
+                <h1 id="eventName">Loading...</h1>
+                <p class="mentor">
+                    Organized by <a href="#" id="eventClub" style="color:var(--accent-light);font-weight:600"></a>
+                    &nbsp;&nbsp;<span id="eventStatus" class="badge badge-success"></span>
+                </p>
+            </div>
+            <div class="detail-actions admin-only">
+                <button class="btn btn-sm btn-secondary" id="editEventBtn">✏️ Edit</button>
+                <button class="btn btn-sm btn-danger" id="deleteEventBtn">🗑️ Delete</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Body -->
+    <div class="detail-body">
+        <!-- Info Cards -->
+        <div class="event-detail-info">
+            <div class="info-card">
+                <div class="info-label">📅 Date</div>
+                <div class="info-value" id="eventDate">—</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">⏰ Time</div>
+                <div class="info-value" id="eventTime">—</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">📍 Location</div>
+                <div class="info-value" id="eventLocation">—</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">🎤 Guest Speaker</div>
+                <div class="info-value" id="eventSpeaker">—</div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="detail-section">
+            <h2>About This Event</h2>
+            <p class="detail-description" id="eventDescription"></p>
+        </div>
+
+        <!-- Prizes -->
+        <div class="detail-section" id="prizeSection">
+            <h2>🏆 Prize Allocation</h2>
+            <ul class="prize-list" id="prizeList"></ul>
+        </div>
+
+        <!-- Register CTA -->
+        <div class="event-register-section">
+            <div>
+                <h3>Ready to participate?</h3>
+                <p id="regCount">0 students registered</p>
+            </div>
+            <div style="display:flex;gap:.75rem;align-items:center">
+                <button class="btn btn-primary btn-lg" id="registerBtn">Register Now →</button>
+                <button class="btn btn-secondary admin-only" id="viewStudentsBtn">👥 View Registered Students</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Students Modal -->
+    <div class="modal-overlay" id="studentsModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Registered Students</h3>
+                <button class="modal-close" onclick="closeModal()">✕</button>
+            </div>
+            <div class="modal-body">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Roll Number</th>
+                            <th>Mobile</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentsTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Spoorthy Engineering College. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/event-detail.js"></script>
+</body>
+</html>

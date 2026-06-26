@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sphoorthy Engineering College Event Management System — Explore clubs, events, and register for activities.">
+    <title>Home — Spoorthy EMS</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="home.html" class="navbar-brand">🎓 <span>Sphoorthy EMS</span></a>
+            <ul class="navbar-nav">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="#clubs">Clubs</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="all-events.html">All Events</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="add-club.html" class="btn btn-sm btn-secondary admin-only">+ Add Club</a>
+                <a href="add-event.html" class="btn btn-sm btn-primary admin-only">+ Add Event</a>
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <div class="profile-avatar" id="profileAvatar">?</div>
+                        <div class="profile-info">
+                            <div class="profile-name" id="profileName">User</div>
+                            <div class="profile-role" id="profileRole">—</div>
+                        </div>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item" style="pointer-events:none;opacity:.6">
+                            Signed in as <strong id="profileName2"></strong>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <button class="dropdown-item danger" onclick="logout()">🚪 Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🏛️ Sphoorthy Engineering College</div>
+            <h1>Discover, Engage &<br><span>Experience Events</span></h1>
+            <p>Your one-stop platform to explore all clubs and events at Spoorthy Engineering College. Stay updated,
+                register for events, and never miss out on campus life.</p>
+            <div class="hero-buttons">
+                <a href="#clubs" id="exploreClubsBtn" class="btn btn-primary btn-lg">Explore Clubs →</a>
+                <a href="#events" id="exploreEventsBtn" class="btn btn-secondary btn-lg">Explore Events →</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="number" id="clubCount">—</div>
+                    <div class="label">Active Clubs</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="number" id="eventCount">—</div>
+                    <div class="label">Upcoming Events</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="number">500+</div>
+                    <div class="label">Students</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clubs Section -->
+    <section class="section" id="clubs">
+        <div class="container">
+            <div class="section-header-row">
+                <div class="section-header">
+                    <h2>Our Clubs</h2>
+                    <p>Join a community that matches your passion and interests</p>
+                </div>
+                <a href="add-club.html" class="btn btn-sm btn-primary admin-only" id="addClubBtn">+ Add Club</a>
+            </div>
+            <div class="clubs-grid" id="clubsGrid">
+                <div class="loading-overlay">
+                    <div class="spinner spinner-lg"></div>
+                    <p>Loading clubs...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section" id="events" style="background:var(--border-light)">
+        <div class="container">
+            <div class="section-header-row">
+                <div class="section-header">
+                    <h2>Upcoming Events</h2>
+                    <p>Don't miss out on the latest happenings around campus</p>
+                </div>
+                <a href="add-event.html" class="btn btn-sm btn-primary admin-only" id="addEventBtn">+ Add Event</a>
+            </div>
+            <div class="events-grid" id="eventsGrid">
+                <div class="loading-overlay">
+                    <div class="spinner spinner-lg"></div>
+                    <p>Loading events...</p>
+                </div>
+            </div>
+            <a href="all-events.html" class="view-all-link" id="viewAllLink" style="display:none">View All Events →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>🎓 Sphoorthy EMS</h4>
+                <p>The official Event Management System for Spoorthy Engineering College. Stay connected with campus
+                    clubs and events.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <p><a href="home.html">Home</a></p>
+                <p><a href="#clubs">Clubs</a></p>
+                <p><a href="all-events.html">All Events</a></p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Sphoorthy Engineering College</p>
+                <p>Hyderabad, Telangana</p>
+                <p><a href="mailto:info@spoorthy.edu.in">info@spoorthy.edu.in</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sphoorthy Engineering College. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

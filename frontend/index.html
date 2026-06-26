@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to Spoorthy Engineering College Event Management System">
+    <title>Login — Spoorthy EMS</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="logo">🎓 <span>Sphoorthy EMS</span></div>
+                <h1>Welcome Back</h1>
+                <p>Sign in to explore events & clubs</p>
+            </div>
+
+            <div id="authAlert" class="auth-alert"></div>
+
+            <form id="loginForm" class="auth-form" novalidate>
+                <div class="form-group">
+                    <label for="identifier">Email or Roll Number</label>
+                    <input type="text" id="identifier" class="form-control" placeholder="Enter your email or roll number" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+
+            <div class="auth-footer">
+                Don't have an account? <a href="register.html">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

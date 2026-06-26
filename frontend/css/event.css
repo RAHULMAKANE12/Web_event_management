@@ -1,0 +1,34 @@
+/* Event Detail Page */
+.event-detail-info {
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;
+    margin-bottom:2rem;
+}
+.info-card {
+    background:var(--bg-primary);border-radius:var(--radius);padding:1.25rem;
+    border:1px solid var(--border-light);
+}
+.info-card .info-label { font-size:.75rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.375rem; }
+.info-card .info-value { font-size:1.05rem;font-weight:600;color:var(--text-heading); }
+
+.prize-list { list-style:none;display:flex;flex-direction:column;gap:.75rem; }
+.prize-item {
+    display:flex;align-items:center;gap:1rem;
+    background:var(--bg-primary);border-radius:var(--radius);padding:1rem 1.25rem;
+    border:1px solid var(--border-light);
+}
+.prize-position {
+    width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:.875rem;flex-shrink:0;
+}
+.prize-position.gold { background:#fef3c7;color:#92400e; }
+.prize-position.silver { background:#f1f5f9;color:#475569; }
+.prize-position.bronze { background:#fed7aa;color:#9a3412; }
+.prize-award { font-size:.95rem;font-weight:500;color:var(--text-heading); }
+
+.event-register-section {
+    background:linear-gradient(135deg,var(--primary-50),#ede9fe);
+    border-radius:var(--radius-lg);padding:2rem;margin-top:2rem;
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+}
+.event-register-section h3 { font-size:1.125rem;font-weight:700;color:var(--text-heading); }
+.event-register-section p { font-size:.875rem;color:var(--text-body); }

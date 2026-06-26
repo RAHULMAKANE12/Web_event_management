@@ -1,0 +1,64 @@
+/* Admin Form Pages */
+.form-page {
+    max-width:var(--container-max);margin:0 auto;padding:2rem var(--container-padding);
+}
+.form-page-header {
+    margin-bottom:2rem;
+}
+.form-page-header h1 { font-size:1.75rem;font-weight:800;color:var(--text-heading);margin-bottom:.375rem; }
+.form-page-header p { color:var(--text-muted); }
+
+.form-card {
+    background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid var(--border);
+    padding:2rem;max-width:720px;
+}
+.form-card .form-row { display:grid;grid-template-columns:1fr 1fr;gap:1rem; }
+
+/* Logo Upload */
+.logo-upload {
+    border:2px dashed var(--border);border-radius:var(--radius);padding:2rem;
+    text-align:center;cursor:pointer;transition:all var(--transition-fast);
+    position:relative;overflow:hidden;
+}
+.logo-upload:hover { border-color:var(--primary);background:var(--primary-50); }
+.logo-upload input { position:absolute;inset:0;opacity:0;cursor:pointer; }
+.logo-upload .upload-icon { font-size:2rem;margin-bottom:.5rem; }
+.logo-upload .upload-text { font-size:.875rem;color:var(--text-muted); }
+.logo-upload .upload-text strong { color:var(--primary); }
+.logo-preview {
+    margin-top:1rem;display:none;
+}
+.logo-preview img {
+    max-width:120px;max-height:120px;border-radius:var(--radius);
+    margin:0 auto;object-fit:cover;border:2px solid var(--border);
+}
+
+/* Prize Rows */
+.prize-rows { display:flex;flex-direction:column;gap:.75rem; }
+.prize-row {
+    display:flex;align-items:center;gap:.75rem;
+}
+.prize-row .form-control { flex:1; }
+.remove-prize {
+    padding:.5rem;border:none;background:var(--danger-bg);color:var(--danger);
+    border-radius:var(--radius-sm);cursor:pointer;font-size:1rem;
+    transition:all var(--transition-fast);flex-shrink:0;
+}
+.remove-prize:hover { background:var(--danger);color:#fff; }
+.add-prize-btn {
+    display:inline-flex;align-items:center;gap:.375rem;
+    font-size:.875rem;color:var(--primary);font-weight:600;
+    background:none;border:none;cursor:pointer;padding:.5rem 0;
+    font-family:var(--font-family);
+}
+.add-prize-btn:hover { color:var(--primary-dark); }
+
+.form-actions {
+    display:flex;gap:.75rem;margin-top:1.5rem;padding-top:1.5rem;
+    border-top:1px solid var(--border);
+}
+
+@media(max-width:600px) {
+    .form-card .form-row { grid-template-columns:1fr; }
+    .prize-row { flex-wrap:wrap; }
+}

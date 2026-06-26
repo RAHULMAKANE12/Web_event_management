@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Details — Spoorthy EMS</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/club.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="home.html" class="navbar-brand">🎓 <span>Sphoorthy EMS</span></a>
+            <ul class="navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html#clubs">Clubs</a></li>
+                <li><a href="all-events.html">Events</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <div class="profile-avatar" id="profileAvatar">?</div>
+                        <div class="profile-info">
+                            <div class="profile-name" id="profileName">User</div>
+                            <div class="profile-role" id="profileRole">—</div>
+                        </div>
+                    </button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item danger" onclick="logout()">🚪 Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Club Hero -->
+    <section class="detail-hero">
+        <div class="detail-hero-content">
+            <a href="home.html#clubs" class="back-link">← Back to Clubs</a>
+        </div>
+        <div class="detail-hero-content">
+            <div class="detail-logo" id="clubLogo"><span class="fallback">?</span></div>
+            <div class="detail-title">
+                <h1 id="clubName">Loading...</h1>
+                <p class="mentor" id="clubMentor"></p>
+            </div>
+            <div class="detail-actions admin-only">
+                <button class="btn btn-sm btn-secondary" id="editClubBtn">✏️ Edit</button>
+                <button class="btn btn-sm btn-danger" id="deleteClubBtn">🗑️ Delete</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Club Body -->
+    <div class="detail-body">
+        <div class="detail-section">
+            <h2>About</h2>
+            <p class="detail-description" id="clubDescription"></p>
+        </div>
+
+        <div class="detail-section">
+            <h2>Events</h2>
+            <div class="tabs">
+                <button class="tab-btn active" id="upcomingTab">Upcoming</button>
+                <button class="tab-btn" id="pastTab">Past Events</button>
+            </div>
+            <div class="events-grid" id="clubEventsGrid">
+                <div class="loading-overlay"><div class="spinner spinner-lg"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Spoorthy Engineering College. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/club-detail.js"></script>
+</body>
+</html>
