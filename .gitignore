@@ -1,0 +1,48 @@
+# ===========================
+# Java / Spring Boot
+# ===========================
+*.class
+*.log
+*.jar
+*.war
+
+# Maven build output
+**/target/
+
+# ===========================
+# Eclipse
+# ===========================
+.project
+.classpath
+.settings/
+
+# ===========================
+# IntelliJ IDEA
+# ===========================
+.idea/
+*.iml
+
+# ===========================
+# VS Code
+# ===========================
+.vscode/
+
+# ===========================
+# Application uploads
+# ===========================
+backend/uploads/
+
+# ===========================
+# Environment / Secrets
+# ===========================
+.env
+
+# Ignore local config if it contains real passwords
+# Uncomment if you decide not to track it
+# backend/src/main/resources/application.properties
+
+# ===========================
+# Operating System
+# ===========================
+.DS_Store
+Thumbs.db
